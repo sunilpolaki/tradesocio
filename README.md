@@ -125,4 +125,29 @@ Copy
 Edit
 
 ---
+📁 Project Structure
+bash
+Copy
+Edit
+.
+├── main.py                     # FastAPI app
+├── Dockerfile
+├── requirements.txt
+├── .github/workflows/
+│   └── ci-cd.yml               # GitHub  Actions CI/CD pipeline
+└── helm/
+    └── fa
 
+
+📁 Project Structure
+bash
+Copy
+Edit
+.
+├── main.py                     # FastAPI app
+├── Dockerfile
+├── requirements.txt
+├── .github/workflows/
+│   └── ci-cd.yml               # GitHub Actions CI/CD pipeline
+└── helm/
+    └── fastapi-app/          

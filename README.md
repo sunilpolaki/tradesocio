@@ -26,6 +26,7 @@ Response:
   "method": "POST",
   "body": "{\"username\":\"xyz\",\"password\":\"xyz\"}"
 }
+---
 
  **Running Locally with Docker**
 1. Build the Docker image:
@@ -90,8 +91,6 @@ Kubernetes native deployment
 
 Declarative configuration with Helm
 
-
----
 
 Project Structure
 

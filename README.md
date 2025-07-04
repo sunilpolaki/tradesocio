@@ -9,6 +9,25 @@
 - Clean, cloud-native structure (12-factor style)
 
 ---
+#  TradeSocio FastAPI Demo
+
+A demo project built with **FastAPI**, Docker, CI/CD via **GitHub Actions**, and deployed using **Kubernetes with Helm**. This solution demonstrates containerization, automation, and cloud-native deployment best practices.
+
+---
+
+##  API Test Case
+
+**Endpoint:**
+
+```bash
+curl -X POST http://localhost:8000/api \
+  -H "Content-Type: application/json" \
+  -d '{"username":"xyz","password":"xyz"}'
+
+
+
+
+
 
 ##  API Test Case
 

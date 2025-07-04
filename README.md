@@ -1,4 +1,4 @@
-## 📌 Features
+##  Features
 
 - FastAPI-based API
 - Echoes request headers, method, and JSON body
@@ -10,7 +10,7 @@
 
 ---
 
-## 🧪 API Test Case
+##  API Test Case
 
 **Endpoint:**
 
@@ -20,58 +20,37 @@ curl -X POST http://localhost:8000/api \
   -d '{"username":"xyz","password":"xyz"}'
 Response:
 
-json
-Copy
-Edit
 {
   "message": "Welcome to our demo API, here are the details of your request:",
   "headers": { ... },
   "method": "POST",
   "body": "{\"username\":\"xyz\",\"password\":\"xyz\"}"
 }
-🐳 Running Locally with Docker
+
+ **Running Locally with Docker**
 1. Build the Docker image:
-bash
-Copy
-Edit
 docker build -t fastapi-app:latest .
 2. Run the container:
-bash
-Copy
-Edit
 docker run -d -p 8000:8000 fastapi-app
 3. Test the endpoint:
 Visit http://localhost:8000/docs or use curl as shown above.
 
-🔁 CI/CD with GitHub Actions
+ **CI/CD with GitHub Actions**
 CI/CD is configured in .github/workflows/ci-cd.yml:
-
 Runs on push to main
-
 Installs dependencies & runs tests
-
 Builds Docker image
-
 Pushes to Docker Hub (set DOCKER_USERNAME and DOCKER_PASSWORD in secrets)
 
-☸️ Kubernetes with Helm
+**Kubernetes with Helm**
 1. Package and install via Helm:
-bash
-Copy
-Edit
 cd helm/fastapi-app
 helm install fastapi-app .
 2. Port-forward to access the app:
-bash
-Copy
-Edit
 kubectl port-forward svc/fastapi-app 8000:80
 Visit: http://localhost:8000/docs
 
-📂 Project Structure
-bash
-Copy
-Edit
+**Project Structure**
 .
 ├── main.py               # FastAPI app
 ├── Dockerfile            # Docker build
@@ -80,19 +59,13 @@ Edit
 └── helm/fastapi-app/     # Helm chart
 📈 Prometheus Integration (Optional)
 Instrument your FastAPI app using prometheus_client:
-
-python
-Copy
-Edit
 from prometheus_client import Counter
-
 request_counter = Counter("api_requests_total", "Total number of requests")
-
 @app.post("/api")
 def handle(request: Request, body: dict):
     request_counter.inc()
     ...
-✅ TODOs / Future Improvements
+TODOs / Future Improvements
 Add unit/integration tests for CI
 
 Add Helm test hook
@@ -103,10 +76,10 @@ Add Open Policy Agent policies
 
 Create GitHub deploy workflow with kubectl context
 
-📬 Submission
+Submission
 Public GitHub Repo: https://github.com/sunilpolaki/tradesocio
 
-🧠 Notes
+ Notes
 This solution follows best practices:
 
 12-Factor app principles
@@ -117,32 +90,11 @@ Kubernetes native deployment
 
 Declarative configuration with Helm
 
-📜 License
-MIT © 2025
-
-yaml
-Copy
-Edit
 
 ---
-📁 Project Structure
-bash
-Copy
-Edit
-.
-├── main.py                     # FastAPI app
-├── Dockerfile
-├── requirements.txt
-├── .github/workflows/
-│   └── ci-cd.yml               # GitHub  Actions CI/CD pipeline
-└── helm/
-    └── fa
 
+Project Structure
 
-📁 Project Structure
-bash
-Copy
-Edit
 .
 ├── main.py                     # FastAPI app
 ├── Dockerfile

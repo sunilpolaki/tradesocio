@@ -71,34 +71,26 @@ request_counter = Counter("api_requests_total", "Total number of requests")
 def handle(request: Request, body: dict):
     request_counter.inc()
     ...
+
+
 TODOs / Future Improvements
 Add unit/integration tests for CI
-
 Add Helm test hook
-
 Deploy to K3s or managed Kubernetes cluster
-
 Add Open Policy Agent policies
-
 Create GitHub deploy workflow with kubectl context
-
 Submission
 Public GitHub Repo: https://github.com/sunilpolaki/tradesocio
 
  Notes
 This solution follows best practices:
-
 12-Factor app principles
-
 Docker layering & security
-
 Kubernetes native deployment
-
 Declarative configuration with Helm
 
 
 Project Structure
-
 .
 ├── main.py                     # FastAPI app
 ├── Dockerfile
